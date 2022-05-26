@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "de8e25b9-f9ed-40a6-aa46-b07fde8d9bf1",
+		"name": "postlist 作業HW5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查詢全部",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shrouded-brushlands-13323.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"shrouded-brushlands-13323",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢-排序-篩選",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shrouded-brushlands-13323.herokuapp.com/posts?timeSort=desc&q=海",
+					"protocol": "https",
+					"host": [
+						"shrouded-brushlands-13323",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "desc"
+						},
+						{
+							"key": "q",
+							"value": "海"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user\": \"627bcb7c34c3dced88711513\",\r\n\"userPhoto\": \"https://cdn2.ettoday.net/images/3637/d3637763.jpg\",\r\n\"image\": \"https://tw.portal-pokemon.com/anime/series/s5/img/XY_main_JP.jpg\",\r\n\"content\": \"我要成為海賊王\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shrouded-brushlands-13323.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"shrouded-brushlands-13323",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
